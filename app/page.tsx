@@ -754,6 +754,12 @@ export default function Home() {
               >
                 Download
               </Link>
+              <Link
+                href="/privacy"
+                className="text-xs text-text-secondary hover:text-text-primary transition-colors font-medium"
+              >
+                Privacy Policy
+              </Link>
             </div>
 
             <div className="text-xs text-text-secondary font-mono">
