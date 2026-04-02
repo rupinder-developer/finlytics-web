@@ -27,6 +27,10 @@ export const metadata: Metadata = {
     'privacy',
     'money management',
   ],
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'Finlytics — Plan Your Money Before You Spend It',
     description:

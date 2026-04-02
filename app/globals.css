@@ -271,6 +271,8 @@ body {
     0 25px 50px -12px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(255, 255, 255, 0.06),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: translateZ(0);
+  contain: layout style paint;
 }
 
 .phone-frame-glow {
@@ -283,6 +285,8 @@ body {
     0 0 0 1px rgba(99, 85, 255, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   position: relative;
+  transform: translateZ(0);
+  contain: layout style;
 }
 
 .phone-frame-dark {
@@ -313,7 +317,7 @@ body {
   border-radius: 14px;
   font-weight: 600;
   font-size: 0.875rem;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
   text-decoration: none;
 }
 
@@ -342,15 +346,22 @@ body {
 }
 
 .feature-card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 20px;
   padding: 28px;
   border: 1px solid rgba(99, 85, 255, 0.08);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
   position: relative;
   overflow: hidden;
+  will-change: transform;
+}
+
+@media (min-width: 768px) {
+  .feature-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.85);
+  }
 }
 
 .feature-card::before {
@@ -382,25 +393,35 @@ body {
   opacity: 1;
 }
 
-.feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px -12px rgba(99, 85, 255, 0.15);
-  border-color: rgba(99, 85, 255, 0.2);
+@media (hover: hover) {
+  .feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -12px rgba(99, 85, 255, 0.15);
+    border-color: rgba(99, 85, 255, 0.2);
+  }
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(99, 85, 255, 0.1);
   border-radius: 20px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.glass-card:hover {
-  background: rgba(255, 255, 255, 0.8);
-  border-color: rgba(99, 85, 255, 0.2);
-  box-shadow: 0 16px 32px -8px rgba(99, 85, 255, 0.12);
+@media (min-width: 768px) {
+  .glass-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.7);
+  }
+}
+
+@media (hover: hover) {
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(99, 85, 255, 0.2);
+    box-shadow: 0 16px 32px -8px rgba(99, 85, 255, 0.12);
+  }
 }
 
 .section-badge {
@@ -452,22 +473,66 @@ body {
   text-align: center;
   padding: 24px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(99, 85, 255, 0.06);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.stat-card:hover {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(99, 85, 255, 0.15);
-  transform: translateY(-2px);
+@media (min-width: 768px) {
+  .stat-card {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.6);
+  }
+}
+
+@media (hover: hover) {
+  .stat-card:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(99, 85, 255, 0.15);
+    transform: translateY(-2px);
+  }
 }
 
 .marquee-mask {
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+@media (max-width: 767px) {
+  .animate-aurora {
+    animation: none;
+  }
+
+  .animate-morph {
+    animation: none;
+    border-radius: 50%;
+  }
+
+  .animate-spin-slow {
+    animation: none;
+  }
+
+  .animate-float {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-aurora,
+  .animate-morph,
+  .animate-spin-slow,
+  .animate-float,
+  .animate-fade-up,
+  .animate-marquee-slow,
+  .text-gradient-animated {
+    animation: none;
+  }
+
+  .animate-fade-up {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .hero-glow-ring {

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { PhoneShowcase } from './phone-showcase';
 
 function AppleIcon({ className }: { className?: string }) {
   return (
@@ -211,9 +212,9 @@ export default function Home() {
         <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-surface">
           <div className="absolute inset-0 bg-grid-pattern opacity-60" />
 
-          <div className="absolute top-[-20%] right-[-10%] w-[700px] h-[700px] bg-primary/8 rounded-full blur-[150px] animate-aurora will-change-transform" />
-          <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-primary-light/6 rounded-full blur-[120px] animate-aurora delay-300 will-change-transform" />
-          <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-primary/4 rounded-full blur-[80px] animate-aurora delay-600 will-change-transform" />
+          <div className="absolute top-[-20%] right-[-10%] w-[700px] h-[700px] bg-primary/8 rounded-full blur-[80px] md:blur-[150px] animate-aurora will-change-transform" />
+          <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-primary-light/6 rounded-full blur-[60px] md:blur-[120px] animate-aurora delay-300 will-change-transform" />
+          <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-primary/4 rounded-full blur-[40px] md:blur-[80px] animate-aurora delay-600 will-change-transform" />
 
           <div className="hero-glow-ring w-[400px] h-[400px] top-[10%] right-[15%]" />
           <div className="hero-glow-ring w-[250px] h-[250px] bottom-[15%] left-[10%]" />
@@ -291,7 +292,7 @@ export default function Home() {
                   <div className="phone-frame w-[190px] opacity-40 scale-90 z-0 animate-float delay-300 -right-10">
                     <div className="phone-screen relative bg-surface">
                       <Image
-                        src="/app-store-screenshots/04.png"
+                        src="/app-store-screenshots/04.jpg"
                         alt="Finlytics allocation tracking"
                         fill
                         sizes="(min-width: 1024px) 190px, 0px"
@@ -302,7 +303,7 @@ export default function Home() {
                   <div className="phone-frame-glow w-[240px] z-10 animate-float relative">
                     <div className="phone-screen relative bg-surface">
                       <Image
-                        src="/app-store-screenshots/07.png"
+                        src="/app-store-screenshots/07.jpg"
                         alt="Finlytics app overview"
                         fill
                         sizes="(min-width: 1024px) 240px, 0px"
@@ -314,7 +315,7 @@ export default function Home() {
                   <div className="phone-frame w-[190px] opacity-40 scale-90 z-0 animate-float delay-500 -left-10">
                     <div className="phone-screen relative bg-surface">
                       <Image
-                        src="/app-store-screenshots/01.png"
+                        src="/app-store-screenshots/01.jpg"
                         alt="Finlytics income entry"
                         fill
                         sizes="(min-width: 1024px) 190px, 0px"
@@ -375,19 +376,19 @@ export default function Home() {
                     step: '01',
                     title: 'Enter your income',
                     desc: 'Start by telling Finlytics your monthly salary. It supports multiple currencies — Rupees, Dollars, Euros, Pounds, and Yen. This is the foundation for your entire plan.',
-                    img: '/app-store-screenshots/01.png',
+                    img: '/app-store-screenshots/01.jpg',
                   },
                   {
                     step: '02',
                     title: 'Plan investments first',
                     desc: 'Choose how much to invest — by percentage or a fixed amount. The key insight: invest first, spend later. Aim for at least 15% of your income.',
-                    img: '/app-store-screenshots/02.png',
+                    img: '/app-store-screenshots/02.jpg',
                   },
                   {
                     step: '03',
                     title: 'Set your savings goal',
                     desc: "Pick a monthly savings target. Whatever's left after savings and investments becomes your spending budget — clear and guilt-free.",
-                    img: '/app-store-screenshots/03.png',
+                    img: '/app-store-screenshots/03.jpg',
                   },
                 ].map((step, idx) => (
                   <div
@@ -439,7 +440,7 @@ export default function Home() {
           className="py-20 lg:py-28 bg-surface relative overflow-hidden section-cv"
         >
           <div className="absolute inset-0 bg-grid-pattern opacity-50" />
-          <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-primary/3 rounded-full blur-[180px] -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-primary/3 rounded-full blur-[80px] md:blur-[180px] -translate-x-1/2 -translate-y-1/2" />
           <div className="max-w-6xl mx-auto px-6 relative z-10">
             <div className="text-center mb-16 animate-fade-up">
               <div className="section-badge mx-auto mb-4">
@@ -490,57 +491,14 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="flex flex-col md:flex-row gap-6 justify-center items-center animate-fade-up">
-              <div
-                className="phone-frame w-[230px] hover:scale-[1.02] transition-transform duration-500"
-                style={{ transform: 'rotate(-6deg)' }}
-              >
-                <div className="phone-screen relative bg-surface">
-                  <Image
-                    src="/app-store-screenshots/04.png"
-                    alt="Track allocation"
-                    fill
-                    sizes="230px"
-                    className="object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div className="phone-frame-glow w-[260px] z-10 md:-translate-y-8 hover:-translate-y-12 transition-transform duration-500">
-                <div className="phone-screen relative bg-surface">
-                  <Image
-                    src="/app-store-screenshots/05.png"
-                    alt="Visualize your money"
-                    fill
-                    sizes="260px"
-                    className="object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div
-                className="phone-frame w-[230px] hover:scale-[1.02] transition-transform duration-500"
-                style={{ transform: 'rotate(6deg)' }}
-              >
-                <div className="phone-screen relative bg-surface">
-                  <Image
-                    src="/app-store-screenshots/06.png"
-                    alt="Check savings health"
-                    fill
-                    sizes="230px"
-                    className="object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
+            <PhoneShowcase />
           </div>
         </section>
 
         {/* Stats */}
         <section className="py-16 lg:py-20 bg-surface relative overflow-hidden section-cv">
           <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-          <div className="absolute top-0 left-1/2 w-[500px] h-[300px] bg-primary/3 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute top-0 left-1/2 w-[500px] h-[300px] bg-primary/3 rounded-full blur-[60px] md:blur-[120px] -translate-x-1/2 -translate-y-1/2" />
           <div className="max-w-5xl mx-auto px-6 relative z-10">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
               {[
@@ -583,7 +541,7 @@ export default function Home() {
           className="py-20 lg:py-28 bg-surface relative overflow-hidden section-cv"
         >
           <div className="absolute inset-0 bg-grid-pattern opacity-40" />
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/3 rounded-full blur-[120px]" />
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/3 rounded-full blur-[60px] md:blur-[120px]" />
           <div className="max-w-6xl mx-auto px-6 relative z-10">
             <div className="lg:grid lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fade-up">
@@ -695,9 +653,9 @@ export default function Home() {
             <div className="relative bg-linear-to-br from-[#151329] via-[#1a1833] to-[#0f0e1e] rounded-3xl p-8 lg:p-14 overflow-hidden border border-white/5">
               <div className="absolute inset-0 bg-grid-pattern opacity-20" />
 
-              <div className="absolute top-0 right-0 w-80 h-80 bg-primary/8 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 animate-aurora will-change-transform" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-light/6 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4 animate-aurora delay-300 will-change-transform" />
-              <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-primary/4 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2 animate-aurora delay-600 will-change-transform" />
+              <div className="absolute top-0 right-0 w-80 h-80 bg-primary/8 rounded-full blur-[60px] md:blur-[120px] -translate-y-1/2 translate-x-1/4 animate-aurora will-change-transform" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-light/6 rounded-full blur-[50px] md:blur-[100px] translate-y-1/2 -translate-x-1/4 animate-aurora delay-300 will-change-transform" />
+              <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-primary/4 rounded-full blur-[40px] md:blur-[80px] -translate-x-1/2 -translate-y-1/2 animate-aurora delay-600 will-change-transform" />
 
               <div className="relative z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                 <div className="flex-1 text-center lg:text-left">
