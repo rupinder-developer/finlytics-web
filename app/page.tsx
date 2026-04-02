@@ -246,14 +246,18 @@ export default function Home() {
                       </div>
                     </div>
                   </Link>
-                  <Link href="#" className="store-button store-button-outline">
+                  <Link
+                    href="/app/finlytics.apk"
+                    download
+                    className="store-button store-button-outline"
+                  >
                     <PlayStoreIcon className="w-5 h-5" />
                     <div className="text-left">
                       <div className="text-[10px] font-normal opacity-60 leading-none">
                         Get it on
                       </div>
                       <div className="text-[15px] font-semibold leading-snug">
-                        Google Play
+                        Android
                       </div>
                     </div>
                   </Link>
@@ -687,7 +691,8 @@ export default function Home() {
                     <ArrowRightIcon className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                   </Link>
                   <Link
-                    href="#"
+                    href="/app/finlytics.apk"
+                    download
                     className="inline-flex items-center justify-center gap-2.5 bg-white/5 text-white border border-white/10 px-7 py-4 rounded-2xl font-semibold text-sm hover:bg-white/10 transition-all hover:-translate-y-0.5"
                   >
                     <PlayStoreIcon className="w-4 h-4" />
