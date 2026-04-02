@@ -37,6 +37,9 @@ export const metadata: Metadata = {
       'Offline-first financial planning with complete privacy. No accounts, no tracking, no data collection.',
     type: 'website',
   },
+  other: {
+    'color-scheme': 'light',
+  },
 };
 
 export default function RootLayout({

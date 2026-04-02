@@ -27,6 +27,11 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  color-scheme: light;
 }
 
 body {
