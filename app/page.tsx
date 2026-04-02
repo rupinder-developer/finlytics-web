@@ -75,45 +75,72 @@ function EyeOffIcon({ className }: { className?: string }) {
 
 function ChartIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M18 20V10" /><path d="M12 20V4" /><path d="M6 20v-6" />
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M18 20V10" />
+      <path d="M12 20V4" />
+      <path d="M6 20v-6" />
     </svg>
   );
 }
 
 function TrendingIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" />
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+      <polyline points="16 7 22 7 22 13" />
     </svg>
   );
 }
 
 function PieIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21.21 15.89A10 10 0 1 1 8 2.83" /><path d="M22 12A10 10 0 0 0 12 2v10z" />
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+      <path d="M22 12A10 10 0 0 0 12 2v10z" />
     </svg>
   );
 }
 
 function ArrowRightIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
     </svg>
   );
 }
-
-const screenshots = [
-  '/app-store-screenshots/01.png',
-  '/app-store-screenshots/02.png',
-  '/app-store-screenshots/03.png',
-  '/app-store-screenshots/04.png',
-  '/app-store-screenshots/05.png',
-  '/app-store-screenshots/06.png',
-  '/app-store-screenshots/07.png',
-];
 
 const marqueeTags = [
   'Offline First',
@@ -132,7 +159,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-surface">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/60 backdrop-blur-2xl border-b border-primary/5">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-primary/5">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2.5">
@@ -141,6 +168,7 @@ export default function Home() {
                   src="/app-icon.png"
                   alt="Finlytics"
                   fill
+                  sizes="36px"
                   className="object-cover"
                 />
               </div>
@@ -183,9 +211,9 @@ export default function Home() {
         <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-surface">
           <div className="absolute inset-0 bg-grid-pattern opacity-60" />
 
-          <div className="absolute top-[-20%] right-[-10%] w-[700px] h-[700px] bg-primary/8 rounded-full blur-[150px] animate-aurora" />
-          <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-primary-light/6 rounded-full blur-[120px] animate-aurora delay-300" />
-          <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-primary/4 rounded-full blur-[80px] animate-aurora delay-600" />
+          <div className="absolute top-[-20%] right-[-10%] w-[700px] h-[700px] bg-primary/8 rounded-full blur-[150px] animate-aurora will-change-transform" />
+          <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] bg-primary-light/6 rounded-full blur-[120px] animate-aurora delay-300 will-change-transform" />
+          <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] bg-primary/4 rounded-full blur-[80px] animate-aurora delay-600 will-change-transform" />
 
           <div className="hero-glow-ring w-[400px] h-[400px] top-[10%] right-[15%]" />
           <div className="hero-glow-ring w-[250px] h-[250px] bottom-[15%] left-[10%]" />
@@ -195,13 +223,15 @@ export default function Home() {
               <div className="lg:col-span-7 animate-fade-up">
                 <div className="section-badge mb-6">
                   <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse-soft" />
-                  <span className="font-mono text-[11px]">v1.0 — iOS &amp; Android</span>
+                  <span className="font-mono text-[11px]">
+                    v1.0 — iOS &amp; Android
+                  </span>
                 </div>
 
                 <h1 className="text-[2.75rem] sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold text-text-primary leading-[1.05] mb-6 tracking-tight">
                   Plan your money{' '}
-                  <span className="text-gradient-animated">before</span>{' '}
-                  you spend&nbsp;it.
+                  <span className="text-gradient-animated">before</span> you
+                  spend&nbsp;it.
                 </h1>
 
                 <p className="text-base lg:text-lg text-text-secondary mb-8 max-w-lg leading-relaxed">
@@ -244,7 +274,9 @@ export default function Home() {
                       key={item.label}
                       className="flex items-center gap-1.5 text-xs font-medium text-text-secondary"
                     >
-                      <span className={`w-1.5 h-1.5 ${item.color} rounded-full`} />
+                      <span
+                        className={`w-1.5 h-1.5 ${item.color} rounded-full`}
+                      />
                       {item.label}
                     </div>
                   ))}
@@ -256,15 +288,13 @@ export default function Home() {
                 style={{ perspective: '1200px' }}
               >
                 <div className="flex items-center gap-0 relative">
-                  <div
-                    className="phone-frame w-[190px] opacity-40 scale-90 z-0 animate-float delay-300"
-                    style={{ transform: 'translateX(-8px) rotateY(12deg) scale(0.9)' }}
-                  >
+                  <div className="phone-frame w-[190px] opacity-40 scale-90 z-0 animate-float delay-300 -right-10">
                     <div className="phone-screen relative bg-surface">
                       <Image
                         src="/app-store-screenshots/04.png"
                         alt="Finlytics allocation tracking"
                         fill
+                        sizes="(min-width: 1024px) 190px, 0px"
                         className="object-cover"
                       />
                     </div>
@@ -275,20 +305,19 @@ export default function Home() {
                         src="/app-store-screenshots/07.png"
                         alt="Finlytics app overview"
                         fill
+                        sizes="(min-width: 1024px) 240px, 0px"
                         className="object-cover"
                         priority
                       />
                     </div>
                   </div>
-                  <div
-                    className="phone-frame w-[190px] opacity-40 scale-90 z-0 animate-float delay-500"
-                    style={{ transform: 'translateX(8px) rotateY(-12deg) scale(0.9)' }}
-                  >
+                  <div className="phone-frame w-[190px] opacity-40 scale-90 z-0 animate-float delay-500 -left-10">
                     <div className="phone-screen relative bg-surface">
                       <Image
                         src="/app-store-screenshots/01.png"
                         alt="Finlytics income entry"
                         fill
+                        sizes="(min-width: 1024px) 190px, 0px"
                         className="object-cover"
                       />
                     </div>
@@ -306,10 +335,7 @@ export default function Home() {
           <div className="marquee-mask">
             <div className="flex animate-marquee-slow whitespace-nowrap">
               {[...marqueeTags, ...marqueeTags].map((tag, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-2 mx-4 shrink-0"
-                >
+                <div key={i} className="flex items-center gap-2 mx-4 shrink-0">
                   <span className="w-1 h-1 bg-primary/40 rounded-full" />
                   <span className="text-xs font-medium text-text-secondary font-mono">
                     {tag}
@@ -321,7 +347,10 @@ export default function Home() {
         </section>
 
         {/* How It Works */}
-        <section id="how-it-works" className="py-20 lg:py-28 bg-surface-alt relative">
+        <section
+          id="how-it-works"
+          className="py-20 lg:py-28 bg-surface-alt relative section-cv"
+        >
           <div className="absolute inset-0 bg-dot-pattern opacity-30" />
           <div className="max-w-6xl mx-auto px-6 relative z-10">
             <div className="text-center mb-16 animate-fade-up">
@@ -388,7 +417,9 @@ export default function Home() {
                             src={step.img}
                             alt={step.title}
                             fill
+                            sizes="260px"
                             className="object-cover"
+                            loading="lazy"
                           />
                         </div>
                       </div>
@@ -403,7 +434,10 @@ export default function Home() {
         <div className="tech-divider" />
 
         {/* Features */}
-        <section id="features" className="py-20 lg:py-28 bg-surface relative overflow-hidden">
+        <section
+          id="features"
+          className="py-20 lg:py-28 bg-surface relative overflow-hidden section-cv"
+        >
           <div className="absolute inset-0 bg-grid-pattern opacity-50" />
           <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-primary/3 rounded-full blur-[180px] -translate-x-1/2 -translate-y-1/2" />
           <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -466,7 +500,9 @@ export default function Home() {
                     src="/app-store-screenshots/04.png"
                     alt="Track allocation"
                     fill
+                    sizes="230px"
                     className="object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -476,7 +512,9 @@ export default function Home() {
                     src="/app-store-screenshots/05.png"
                     alt="Visualize your money"
                     fill
+                    sizes="260px"
                     className="object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -489,7 +527,9 @@ export default function Home() {
                     src="/app-store-screenshots/06.png"
                     alt="Check savings health"
                     fill
+                    sizes="230px"
                     className="object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -497,59 +537,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Gallery */}
-        <section className="py-20 lg:py-28 bg-surface-alt relative">
-          <div className="absolute inset-0 bg-dot-pattern opacity-20" />
-          <div className="max-w-6xl mx-auto px-6 mb-10 relative z-10">
-            <div className="text-center animate-fade-up">
-              <div className="section-badge mx-auto mb-4">
-                <span>INTERFACE</span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-[3rem] font-bold text-text-primary tracking-tight mb-4">
-                Beautifully simple.
-              </h2>
-              <p className="text-text-secondary text-base lg:text-lg max-w-lg mx-auto">
-                A clean, distraction-free interface designed to give you
-                absolute clarity over your finances.
-              </p>
-            </div>
-          </div>
-
-          <div
-            className="flex gap-5 px-6 pt-4 pb-16 snap-x snap-mandatory hide-scrollbar overflow-x-auto overflow-y-visible"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            {screenshots.map((src, i) => (
-              <div
-                key={i}
-                className="shrink-0 snap-center first:ml-[calc(50vw-95px)] last:mr-[calc(50vw-95px)] md:first:ml-auto md:last:mr-auto"
-              >
-                <div className="phone-frame w-[190px] hover:-translate-y-3 transition-transform duration-300">
-                  <div className="phone-screen relative bg-surface">
-                    <Image
-                      src={src}
-                      alt={`App screenshot ${i + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Stats */}
-        <section className="py-16 lg:py-20 bg-surface relative overflow-hidden">
+        <section className="py-16 lg:py-20 bg-surface relative overflow-hidden section-cv">
           <div className="absolute inset-0 bg-grid-pattern opacity-30" />
           <div className="absolute top-0 left-1/2 w-[500px] h-[300px] bg-primary/3 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
           <div className="max-w-5xl mx-auto px-6 relative z-10">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
               {[
-                { value: '< 1 min', label: 'Setup Time', desc: 'Quick onboarding' },
+                {
+                  value: '< 1 min',
+                  label: 'Setup Time',
+                  desc: 'Quick onboarding',
+                },
                 { value: '5+', label: 'Currencies', desc: 'Global support' },
                 { value: '100%', label: 'Offline', desc: 'Works anywhere' },
-                { value: '0', label: 'Data Collected', desc: 'Complete privacy' },
+                {
+                  value: '0',
+                  label: 'Data Collected',
+                  desc: 'Complete privacy',
+                },
               ].map((stat, i) => (
                 <div
                   key={i}
@@ -562,9 +568,7 @@ export default function Home() {
                   <div className="text-sm font-semibold text-text-primary mb-0.5">
                     {stat.label}
                   </div>
-                  <div className="text-xs text-text-secondary">
-                    {stat.desc}
-                  </div>
+                  <div className="text-xs text-text-secondary">{stat.desc}</div>
                 </div>
               ))}
             </div>
@@ -574,7 +578,10 @@ export default function Home() {
         <div className="tech-divider" />
 
         {/* Privacy */}
-        <section id="privacy" className="py-20 lg:py-28 bg-surface relative overflow-hidden">
+        <section
+          id="privacy"
+          className="py-20 lg:py-28 bg-surface relative overflow-hidden section-cv"
+        >
           <div className="absolute inset-0 bg-grid-pattern opacity-40" />
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/3 rounded-full blur-[120px]" />
           <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -641,7 +648,10 @@ export default function Home() {
                     <div className="absolute inset-12 border border-primary/5 rounded-full" />
                   </div>
                   <div className="absolute inset-0 animate-morph bg-primary/5" />
-                  <div className="absolute inset-4 animate-morph bg-primary/3" style={{ animationDelay: '2s' }} />
+                  <div
+                    className="absolute inset-4 animate-morph bg-primary/3"
+                    style={{ animationDelay: '2s' }}
+                  />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="gradient-border p-8 flex flex-col items-center gap-5">
                       <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/15 flex items-center justify-center">
@@ -676,15 +686,18 @@ export default function Home() {
         <div className="tech-divider" />
 
         {/* CTA */}
-        <section id="download" className="py-16 lg:py-20 bg-surface-alt relative">
+        <section
+          id="download"
+          className="py-16 lg:py-20 bg-surface-alt relative section-cv"
+        >
           <div className="absolute inset-0 bg-dot-pattern opacity-20" />
           <div className="max-w-6xl mx-auto px-6 relative z-10">
             <div className="relative bg-linear-to-br from-[#151329] via-[#1a1833] to-[#0f0e1e] rounded-3xl p-8 lg:p-14 overflow-hidden border border-white/5">
               <div className="absolute inset-0 bg-grid-pattern opacity-20" />
 
-              <div className="absolute top-0 right-0 w-80 h-80 bg-primary/8 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 animate-aurora" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-light/6 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4 animate-aurora delay-300" />
-              <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-primary/4 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2 animate-aurora delay-600" />
+              <div className="absolute top-0 right-0 w-80 h-80 bg-primary/8 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 animate-aurora will-change-transform" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-light/6 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4 animate-aurora delay-300 will-change-transform" />
+              <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-primary/4 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2 animate-aurora delay-600 will-change-transform" />
 
               <div className="relative z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                 <div className="flex-1 text-center lg:text-left">
@@ -694,18 +707,21 @@ export default function Home() {
                         src="/app-icon.png"
                         alt="Finlytics"
                         fill
+                        sizes="44px"
                         className="object-cover"
                       />
                     </div>
-                    <span className="text-white/40 text-xs font-mono">v1.0.0</span>
+                    <span className="text-white/40 text-xs font-mono">
+                      v1.0.0
+                    </span>
                   </div>
                   <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white tracking-tight mb-4 animate-fade-up leading-tight">
                     Start planning smarter{' '}
                     <span className="text-gradient-animated">today</span>
                   </h2>
                   <p className="text-white/50 text-sm lg:text-base max-w-md leading-relaxed animate-fade-up delay-100">
-                    Join thousands who plan their money before spending it. Free,
-                    private, and available on both platforms.
+                    Join thousands who plan their money before spending it.
+                    Free, private, and available on both platforms.
                   </p>
                 </div>
 
@@ -743,6 +759,7 @@ export default function Home() {
                   src="/app-icon.png"
                   alt="Finlytics"
                   fill
+                  sizes="28px"
                   className="object-cover"
                 />
               </div>
