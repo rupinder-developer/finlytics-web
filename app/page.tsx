@@ -163,7 +163,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-primary/5">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center gap-2.5">
+            <Link href="/#" className="flex items-center gap-2.5">
               <div className="w-9 h-9 relative rounded-xl overflow-hidden ring-1 ring-primary/20 shadow-lg shadow-primary/10">
                 <Image
                   src="/app-icon.png"
@@ -176,7 +176,7 @@ export default function Home() {
               <span className="text-lg font-bold tracking-tight text-text-primary">
                 Finlytics
               </span>
-            </div>
+            </Link>
             <div className="hidden md:flex items-center gap-8">
               <Link
                 href="#how-it-works"
@@ -189,12 +189,6 @@ export default function Home() {
                 className="text-sm text-text-secondary hover:text-text-primary transition-colors font-medium"
               >
                 Features
-              </Link>
-              <Link
-                href="#privacy"
-                className="text-sm text-text-secondary hover:text-text-primary transition-colors font-medium"
-              >
-                Privacy
               </Link>
               <Link
                 href="#download"
@@ -537,7 +531,7 @@ export default function Home() {
 
         {/* Privacy */}
         <section
-          id="privacy"
+          id="security"
           className="py-20 lg:py-28 bg-surface relative overflow-hidden section-cv"
         >
           <div className="absolute inset-0 bg-grid-pattern opacity-40" />
@@ -741,18 +735,6 @@ export default function Home() {
                 className="text-xs text-text-secondary hover:text-text-primary transition-colors font-medium"
               >
                 Features
-              </Link>
-              <Link
-                href="#privacy"
-                className="text-xs text-text-secondary hover:text-text-primary transition-colors font-medium"
-              >
-                Privacy
-              </Link>
-              <Link
-                href="#download"
-                className="text-xs text-text-secondary hover:text-primary transition-colors font-medium"
-              >
-                Download
               </Link>
               <Link
                 href="/privacy"
