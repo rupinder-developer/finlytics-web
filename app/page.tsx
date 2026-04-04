@@ -245,7 +245,7 @@ export default function Home() {
 
                   <div className="flex flex-wrap gap-3 mb-8">
                     <Link
-                      href="#"
+                      href="https://apps.apple.com/app/finlytics/id6761518914"
                       className="store-button store-button-primary"
                     >
                       <AppleIcon className="w-5 h-5" />
@@ -703,7 +703,7 @@ export default function Home() {
 
                   <div className="flex flex-col sm:flex-row gap-3 animate-fade-up delay-200">
                     <Link
-                      href="#"
+                      href="https://apps.apple.com/app/finlytics/id6761518914"
                       className="whitespace-nowrap group inline-flex items-center justify-center gap-2.5 bg-primary text-white px-7 py-4 rounded-2xl font-semibold text-sm hover:bg-primary-light transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5"
                     >
                       <AppleIcon className="w-4 h-4" />
