@@ -161,7 +161,7 @@ const marqueeTags = [
   'Expense Tracking',
 ];
 
-const viaGooglePlay = false;
+const viaGooglePlay = true;
 
 export default function Home() {
   return (
@@ -260,7 +260,7 @@ export default function Home() {
                     </Link>
                     {viaGooglePlay ? (
                       <Link
-                        href="#"
+                        href="https://play.google.com/store/apps/details?id=com.rupindersingh.finlytics"
                         className="store-button store-button-outline"
                       >
                         <PlayStoreIcon className="w-5 h-5" />
