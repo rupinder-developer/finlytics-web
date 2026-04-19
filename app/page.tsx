@@ -712,7 +712,7 @@ export default function Home() {
                     </Link>
                     {viaGooglePlay ? (
                       <Link
-                        href="#"
+                        href="https://play.google.com/store/apps/details?id=com.rupindersingh.finlytics"
                         className="whitespace-nowrap inline-flex items-center justify-center gap-2.5 bg-white/5 text-white border border-white/10 px-7 py-4 rounded-2xl font-semibold text-sm hover:bg-white/10 transition-all hover:-translate-y-0.5"
                       >
                         <PlayStoreIcon className="w-4 h-4" />
